@@ -25,7 +25,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(ZipBox.Text, "Zip", "Zip") == true)
+                if (DBConnection.CheKingAll(ZipBox.Text, "Zip", "Zip") == true)
                 {
                     MessageBox.Show("Такая запись уже есть в базе данных");
                 }
@@ -46,7 +46,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(ZipDataGridView.CurrentRow.Cells[0].Value.ToString(), "Zip", "accounting") == true)
+                if (DBConnection.CheKingAll(ZipDataGridView.CurrentRow.Cells[0].Value.ToString(), "Zip", "accounting") == true)
                 {
                     MessageBox.Show("Этот ЗИП используется в учёте, удаление невозможно");
                 }

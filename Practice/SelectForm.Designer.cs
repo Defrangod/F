@@ -197,6 +197,7 @@
             this.MainButton.TabIndex = 8;
             this.MainButton.Text = "Учёт запасных частей и оборудования";
             this.MainButton.UseVisualStyleBackColor = true;
+            this.MainButton.Click += new System.EventHandler(this.MainButton_Click);
             // 
             // SelectForm
             // 

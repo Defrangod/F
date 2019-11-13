@@ -28,7 +28,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(StatusDataGridView.CurrentRow.Cells[0].Value.ToString(), "Status", "accounting") == true)
+                if (DBConnection.CheKingAll(StatusDataGridView.CurrentRow.Cells[0].Value.ToString(), "Status", "accounting") == true)
                 {
                     MessageBox.Show("Этот статус используется в учёте, удаление невозможно");
                 }
@@ -55,7 +55,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(StatusBox.Text, "Status", "Status") == true)
+                if (DBConnection.CheKingAll(StatusBox.Text, "Status", "Status") == true)
                 {
                     MessageBox.Show("Такая запись уже есть в базе данных");
                 }

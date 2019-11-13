@@ -28,7 +28,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(InnBox.Text, "INN", "supplier") == true || DBConnection.checkDel(NameBox.Text, "Name", "supplier") )
+                if (DBConnection.CheKingAll(InnBox.Text, "INN", "supplier") == true || DBConnection.CheKingAll(NameBox.Text, "Name", "supplier") )
                 {
                     MessageBox.Show("Поставщик с таким названием организации / ИНН  уже есть в базе данных");
                 }
@@ -94,7 +94,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(SupplierDataGridView.CurrentRow.Cells[0].Value.ToString(), "supplier", "accounting") == true)
+                if (DBConnection.CheKingAll(SupplierDataGridView.CurrentRow.Cells[0].Value.ToString(), "supplier", "accounting") == true)
                 {
                     MessageBox.Show("Этот Поставщик используется в учёте, удаление невозможно");
                 }
@@ -122,7 +122,7 @@ namespace Practice
             else
             {
                 //Проверка логина на дублирование
-                if (DBConnection.checkDel(InnBox.Text, "INN", "supplier") == true && InnBox.Text != OldInn || DBConnection.checkDel(NameBox.Text, "Name", "supplier") && OldName != NameBox.Text)
+                if (DBConnection.CheKingAll(InnBox.Text, "INN", "supplier") == true && InnBox.Text != OldInn || DBConnection.CheKingAll(NameBox.Text, "Name", "supplier") && OldName != NameBox.Text)
                 {
                     MessageBox.Show("Поставщик с таким названием организации / ИНН  уже есть в базе данных");
                 }

@@ -31,7 +31,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(RoleBox.Text, "Role", "Role") == true)
+                if (DBConnection.CheKingAll(RoleBox.Text, "Role", "Role") == true)
                 {
                     MessageBox.Show("Такая запись уже есть в базе данных");
                 }
@@ -52,7 +52,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(RoleDataGridView.CurrentRow.Cells[0].Value.ToString(),"Role","user") == true)
+                if (DBConnection.CheKingAll(RoleDataGridView.CurrentRow.Cells[0].Value.ToString(),"Role","user") == true)
                 {
                     MessageBox.Show("Какой то пользователь имеет эту роль, удаление невозможно");
                 }

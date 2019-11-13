@@ -25,7 +25,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(DevisionBox.Text, "Division", "Division") == true)
+                if (DBConnection.CheKingAll(DevisionBox.Text, "Division", "Division") == true)
                 {
                     MessageBox.Show("Такая запись уже есть в базе данных");
                 }
@@ -46,7 +46,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(DivisionDataGridView.CurrentRow.Cells[0].Value.ToString(), "Division", "accounting") == true)
+                if (DBConnection.CheKingAll(DivisionDataGridView.CurrentRow.Cells[0].Value.ToString(), "Division", "accounting") == true)
                 {
                     MessageBox.Show("Это подразделение используется в учёте, удаление невозможно");
                 }

@@ -24,3 +24,5 @@ C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.CategoryForm.reso
 C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.ZipForm.resources
 C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.EquipmentForm.resources
 C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.SupplierForm.resources
+C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.SotrudForm.resources
+C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.AccountingForm.resources

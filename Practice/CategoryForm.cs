@@ -31,7 +31,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(CategoryBox.Text, "Category", "Category") == true)
+                if (DBConnection.CheKingAll(CategoryBox.Text, "Category", "Category") == true)
                 {
                     MessageBox.Show("Такая запись уже есть в базе данных");
                 }
@@ -52,7 +52,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(CategoryDataGridView.CurrentRow.Cells[0].Value.ToString(), "Category", "accounting") == true)
+                if (DBConnection.CheKingAll(CategoryDataGridView.CurrentRow.Cells[0].Value.ToString(), "Category", "accounting") == true)
                 {
                     MessageBox.Show("Эта категория используется в учёте, удаление невозможно");
                 }

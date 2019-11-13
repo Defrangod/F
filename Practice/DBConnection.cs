@@ -34,6 +34,9 @@ namespace Practice
         static public DataTable dtzip = new DataTable();
         static public DataTable dtEquip = new DataTable();
         static public DataTable dtSupplier = new DataTable();
+        static public DataTable dtSotrud = new DataTable();
+        static public DataTable dtUserCombo = new DataTable();
+        static public DataTable dtAccounting = new DataTable();
         //
         // Подключение БД
         //
@@ -207,7 +210,7 @@ namespace Practice
             }
         }
         //
-        //Вывод списка составщиков
+        //Вывод списка поставщиков
         //
         static public void GetSupplierList()
         {
@@ -223,9 +226,57 @@ namespace Practice
             }
         }
         //
+        //Вывод списка юзеров
+        //
+        static public void GetUserComboList()
+        {
+            try
+            {
+                msCommand.CommandText = "select * from user where id not in (select sotrud.user from sotrud where sotrud.user = user.id);";
+                dtUserCombo.Clear();
+                msDataAdapter.Fill(dtUserCombo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка!");
+            }
+        }
+        //
+        //Вывод списка cотрудников
+        //
+        static public void GetSotrudList()
+        {
+            try
+            {
+                msCommand.CommandText = "select sotrud.id, sotrud.FIO, sotrud.Phone, user.Login from sotrud,user where sotrud.User = user.ID";
+                dtSotrud.Clear();
+                msDataAdapter.Fill(dtSotrud);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка!");
+            }
+        }
+        //
+        //Вывод списка учёта
+        //
+        static public void GetAccountingList()
+        {
+            try
+            {
+                msCommand.CommandText = " select accounting.ID, category.category, equipment.equipment, Zip.zip, accounting.PartNmodel, accounting.kolvo, accounting.InvNumber, supplier.Name,division.division,Status.Status, accounting.comment, accounting.DatePost, accounting.DateEdit, sotrud.FIO from accounting,category,equipment,zip,supplier,division,status,sotrud where accounting.Category = category.ID and accounting.Equipment = equipment.ID and accounting.zip = zip.id and accounting.supplier = supplier.ID and accounting.Division = division.ID and accounting.status = status.ID and accounting.sotrud = sotrud.ID;";
+                dtAccounting.Clear();
+                msDataAdapter.Fill(dtAccounting);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка!");
+            }
+        }
+
         // проверка существования 
         //
-        static public bool checkDel(string id,string Stolb,string tabl)
+        static public bool CheKingAll(string id,string Stolb,string tabl)
         {
             msCommand.CommandText = "select count("+ Stolb +") from "+ tabl +" where "+ Stolb +"='" + id + "'";
             int count = Convert.ToInt32(msCommand.ExecuteScalar());
@@ -247,7 +298,7 @@ namespace Practice
                 return false;
         }
 
-        //
+        //  
         //Edit
         //
         static public void Edit(string table, string parametr)

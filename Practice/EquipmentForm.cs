@@ -22,7 +22,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(EquipmentDataGridView.CurrentRow.Cells[0].Value.ToString(), "Equipment", "accounting") == true)
+                if (DBConnection.CheKingAll(EquipmentDataGridView.CurrentRow.Cells[0].Value.ToString(), "Equipment", "accounting") == true)
                 {
                     MessageBox.Show("Это оборудование используется в учёте, удаление невозможно");
                 }
@@ -49,7 +49,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(EquipmentBox.Text, "Equipment", "Equipment") == true)
+                if (DBConnection.CheKingAll(EquipmentBox.Text, "Equipment", "Equipment") == true)
                 {
                     MessageBox.Show("Такая запись уже есть в базе данных");
                 }

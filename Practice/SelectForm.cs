@@ -73,13 +73,20 @@ namespace Practice
 
         private void SotrudButton_Click(object sender, EventArgs e)
         {
-
+            SotrudForm SotrudFrm = new SotrudForm();
+            SotrudFrm.Show();
         }
 
         private void SupplierButton_Click(object sender, EventArgs e)
         {
             SupplierForm SupplierFrm = new SupplierForm();
             SupplierFrm.Show();
+        }
+
+        private void MainButton_Click(object sender, EventArgs e)
+        {
+            AccountingForm accountingFrm = new AccountingForm();
+            accountingFrm.Show();
         }
     }
 }

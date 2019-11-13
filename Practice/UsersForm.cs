@@ -39,7 +39,7 @@ namespace Practice
             }
             else
             {
-                if (DBConnection.checkDel(LoginBox.Text,"login","user") == true)
+                if (DBConnection.CheKingAll(LoginBox.Text,"login","user") == true)
                 {
                     MessageBox.Show("дублируется логин");
                 }
@@ -80,7 +80,7 @@ namespace Practice
             DialogResult result = MessageBox.Show("Вы уверены что вы хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (DBConnection.checkDel(UsersDataGridView.CurrentRow.Cells[0].Value.ToString(), "User", "sotrud") == true)
+                if (DBConnection.CheKingAll(UsersDataGridView.CurrentRow.Cells[0].Value.ToString(), "User", "sotrud") == true)
                 {
                     MessageBox.Show("Пользователь привязан к сотруднику, удаление невозможно");
                 }
@@ -120,7 +120,7 @@ namespace Practice
             else
             {
                 //Проверка логина на дублирование
-                if (DBConnection.checkDel(LoginBox.Text, "login", "user") == true && LoginBox.Text != LoginB)
+                if (DBConnection.CheKingAll(LoginBox.Text, "login", "user") == true && LoginBox.Text != LoginB)
                 {
                     MessageBox.Show("дублируется логин");
                 }

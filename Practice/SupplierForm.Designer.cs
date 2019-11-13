@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.SupplierDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_sz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Site_sz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,13 +53,6 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name_sz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.INN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Site_sz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContractPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SupplierDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +76,59 @@
             this.SupplierDataGridView.ReadOnly = true;
             this.SupplierDataGridView.Size = new System.Drawing.Size(857, 195);
             this.SupplierDataGridView.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Name_sz
+            // 
+            this.Name_sz.DataPropertyName = "Name";
+            this.Name_sz.HeaderText = "Наименование";
+            this.Name_sz.Name = "Name_sz";
+            this.Name_sz.ReadOnly = true;
+            this.Name_sz.Width = 160;
+            // 
+            // INN
+            // 
+            this.INN.DataPropertyName = "INN";
+            this.INN.HeaderText = "ИНН";
+            this.INN.Name = "INN";
+            this.INN.ReadOnly = true;
+            // 
+            // Adress
+            // 
+            this.Adress.DataPropertyName = "Adress";
+            this.Adress.HeaderText = "Адрес";
+            this.Adress.Name = "Adress";
+            this.Adress.ReadOnly = true;
+            this.Adress.Width = 175;
+            // 
+            // PastName
+            // 
+            this.PastName.DataPropertyName = "PastName";
+            this.PastName.HeaderText = "Прошлое наименование";
+            this.PastName.Name = "PastName";
+            this.PastName.ReadOnly = true;
+            this.PastName.Width = 160;
+            // 
+            // Site_sz
+            // 
+            this.Site_sz.DataPropertyName = "Site";
+            this.Site_sz.HeaderText = "Сайт";
+            this.Site_sz.Name = "Site_sz";
+            this.Site_sz.ReadOnly = true;
+            // 
+            // ContractPerson
+            // 
+            this.ContractPerson.DataPropertyName = "ContractPerson";
+            this.ContractPerson.HeaderText = "Контактное лицо";
+            this.ContractPerson.Name = "ContractPerson";
+            this.ContractPerson.ReadOnly = true;
             // 
             // label1
             // 
@@ -187,7 +240,7 @@
             // CancelButton
             // 
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(604, 245);
+            this.CancelButton.Location = new System.Drawing.Point(604, 210);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(86, 29);
             this.CancelButton.TabIndex = 16;
@@ -199,7 +252,7 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(473, 245);
+            this.SaveButton.Location = new System.Drawing.Point(473, 210);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(86, 29);
             this.SaveButton.TabIndex = 15;
@@ -229,52 +282,6 @@
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Name_sz
-            // 
-            this.Name_sz.DataPropertyName = "Name";
-            this.Name_sz.HeaderText = "Наименование";
-            this.Name_sz.Name = "Name_sz";
-            this.Name_sz.Width = 160;
-            // 
-            // INN
-            // 
-            this.INN.DataPropertyName = "INN";
-            this.INN.HeaderText = "ИНН";
-            this.INN.Name = "INN";
-            // 
-            // Adress
-            // 
-            this.Adress.DataPropertyName = "Adress";
-            this.Adress.HeaderText = "Адрес";
-            this.Adress.Name = "Adress";
-            this.Adress.Width = 175;
-            // 
-            // PastName
-            // 
-            this.PastName.DataPropertyName = "PastName";
-            this.PastName.HeaderText = "Прошлое наименование";
-            this.PastName.Name = "PastName";
-            this.PastName.Width = 160;
-            // 
-            // Site_sz
-            // 
-            this.Site_sz.DataPropertyName = "Site";
-            this.Site_sz.HeaderText = "Сайт";
-            this.Site_sz.Name = "Site_sz";
-            // 
-            // ContractPerson
-            // 
-            this.ContractPerson.DataPropertyName = "ContractPerson";
-            this.ContractPerson.HeaderText = "Контактное лицо";
-            this.ContractPerson.Name = "ContractPerson";
             // 
             // SupplierForm
             // 
