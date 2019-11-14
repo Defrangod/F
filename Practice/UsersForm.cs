@@ -63,8 +63,14 @@ namespace Practice
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            
-
+            DeleteButton.Enabled = false;
+            SaveButton.Visible = true;
+            CancelButton.Visible = true;
+            //Перенос записи из таблицы
+            IDs = UsersDataGridView.CurrentRow.Cells[0].Value.ToString();
+            LoginBox.Text = UsersDataGridView.CurrentRow.Cells[1].Value.ToString();
+            LoginB = UsersDataGridView.CurrentRow.Cells[1].Value.ToString();
+            PassBox.Text = UsersDataGridView.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
