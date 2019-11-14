@@ -100,6 +100,7 @@
             this.EquipmentBox.Name = "EquipmentBox";
             this.EquipmentBox.Size = new System.Drawing.Size(176, 23);
             this.EquipmentBox.TabIndex = 17;
+            this.EquipmentBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EquipmentBox_KeyPress);
             // 
             // label1
             // 

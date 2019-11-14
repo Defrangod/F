@@ -88,6 +88,7 @@
             this.DevisionBox.Name = "DevisionBox";
             this.DevisionBox.Size = new System.Drawing.Size(182, 23);
             this.DevisionBox.TabIndex = 2;
+            this.DevisionBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DevisionBox_KeyPress);
             // 
             // AddButton
             // 

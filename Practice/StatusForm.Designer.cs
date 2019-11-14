@@ -77,6 +77,7 @@
             this.StatusBox.Name = "StatusBox";
             this.StatusBox.Size = new System.Drawing.Size(190, 20);
             this.StatusBox.TabIndex = 1;
+            this.StatusBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StatusBox_KeyPress);
             // 
             // label1
             // 

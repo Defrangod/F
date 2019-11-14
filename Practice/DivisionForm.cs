@@ -70,5 +70,10 @@ namespace Practice
             DBConnection.GetDivisionList();
             DivisionDataGridView.DataSource = DBConnection.dtDivision;
         }
+
+        private void DevisionBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar != ' ')) e.Handled = true;
+        }
     }
 }

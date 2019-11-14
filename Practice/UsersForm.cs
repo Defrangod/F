@@ -46,7 +46,7 @@ namespace Practice
                 else
                 {
                     //добавление записи
-                    string addstring = "null," + LoginBox.Text + "," + PassBox.Text + ",'" +RoleComboBox.SelectedValue.ToString() + "'";
+                    string addstring = "null,'" + LoginBox.Text + "','" + PassBox.Text + "','" + RoleComboBox.SelectedValue.ToString() + "'";
                     DBConnection.add("user",addstring);
                     MessageBox.Show("Запись добавлена");
                     //обновление таблицы
@@ -63,15 +63,7 @@ namespace Practice
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            //Настройка кнопок
-            DeleteButton.Enabled = false;
-            SaveButton.Visible = true;
-            CancelButton.Visible = true;
-            //Перенос записи из таблицы
-            IDs = UsersDataGridView.CurrentRow.Cells[0].Value.ToString();
-            LoginBox.Text = UsersDataGridView.CurrentRow.Cells[1].Value.ToString();
-            LoginB = UsersDataGridView.CurrentRow.Cells[1].Value.ToString();
-            PassBox.Text = UsersDataGridView.CurrentRow.Cells[2].Value.ToString();
+            
 
         }
 
@@ -144,6 +136,11 @@ namespace Practice
                     CancelButton.Visible = false;
                 }
             }
+        }
+
+        private void LoginBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z')) e.Handled = true;
         }
     }
 }

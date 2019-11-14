@@ -86,6 +86,7 @@
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(161, 20);
             this.LoginBox.TabIndex = 4;
+            this.LoginBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_pass_KeyPress);
             // 
             // PassBox
             // 
@@ -94,6 +95,7 @@
             this.PassBox.PasswordChar = '*';
             this.PassBox.Size = new System.Drawing.Size(161, 20);
             this.PassBox.TabIndex = 5;
+            this.PassBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_pass_KeyPress);
             // 
             // LoginForm
             // 

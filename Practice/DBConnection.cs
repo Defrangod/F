@@ -23,6 +23,7 @@ namespace Practice
         //
         static public string User;
         static public string Role;
+        static public string SotrudId;
         //
         //Базы данных
         //
@@ -87,6 +88,23 @@ namespace Practice
             catch (Exception ex)
             {
                 Role = User = null;
+                MessageBox.Show(ex.ToString(), "Ошибка!");
+            }
+        }
+        //
+        //Get Sotrud ID
+        //
+        static public void GetSotrudID(string login)
+        {
+            try
+            {
+
+                msCommand.CommandText = "select sotrud.ID FROM sotrud inner join user on sotrud.User = user.ID Where user.login='" + login + "'";
+                Object result = msCommand.ExecuteScalar();
+                SotrudId = result.ToString();
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString(), "Ошибка!");
             }
         }

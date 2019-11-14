@@ -78,6 +78,7 @@
             this.RoleBox.Name = "RoleBox";
             this.RoleBox.Size = new System.Drawing.Size(197, 23);
             this.RoleBox.TabIndex = 2;
+            this.RoleBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RoleBox_KeyPress);
             // 
             // AddButton
             // 

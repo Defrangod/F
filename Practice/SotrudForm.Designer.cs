@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.SotruDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
@@ -40,10 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CancelButton = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SotruDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +65,36 @@
             this.SotruDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SotruDataGridView.Size = new System.Drawing.Size(464, 150);
             this.SotruDataGridView.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // FIO
+            // 
+            this.FIO.DataPropertyName = "FIO";
+            this.FIO.HeaderText = "ФИО";
+            this.FIO.Name = "FIO";
+            this.FIO.ReadOnly = true;
+            this.FIO.Width = 200;
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Телефон";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // User
+            // 
+            this.User.DataPropertyName = "Login";
+            this.User.HeaderText = "Пользователь";
+            this.User.Name = "User";
+            this.User.ReadOnly = true;
             // 
             // DeleteButton
             // 
@@ -117,6 +147,7 @@
             this.FIOBox.Name = "FIOBox";
             this.FIOBox.Size = new System.Drawing.Size(184, 20);
             this.FIOBox.TabIndex = 23;
+            this.FIOBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FIOBox_KeyPress);
             // 
             // PhoneBox
             // 
@@ -124,6 +155,7 @@
             this.PhoneBox.Name = "PhoneBox";
             this.PhoneBox.Size = new System.Drawing.Size(184, 20);
             this.PhoneBox.TabIndex = 24;
+            this.PhoneBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneBox_KeyPress);
             // 
             // UserComboBox
             // 
@@ -172,36 +204,6 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Visible = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // FIO
-            // 
-            this.FIO.DataPropertyName = "FIO";
-            this.FIO.HeaderText = "ФИО";
-            this.FIO.Name = "FIO";
-            this.FIO.ReadOnly = true;
-            this.FIO.Width = 200;
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Телефон";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // User
-            // 
-            this.User.DataPropertyName = "Login";
-            this.User.HeaderText = "Пользователь";
-            this.User.Name = "User";
-            this.User.ReadOnly = true;
             // 
             // SotrudForm
             // 

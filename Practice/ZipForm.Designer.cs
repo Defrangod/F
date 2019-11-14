@@ -100,6 +100,7 @@
             this.ZipBox.Name = "ZipBox";
             this.ZipBox.Size = new System.Drawing.Size(230, 23);
             this.ZipBox.TabIndex = 12;
+            this.ZipBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ZipBox_KeyPress);
             // 
             // label1
             // 

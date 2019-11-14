@@ -105,6 +105,7 @@
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(100, 26);
             this.LoginBox.TabIndex = 1;
+            this.LoginBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoginBox_KeyPress);
             // 
             // label1
             // 
@@ -180,6 +181,7 @@
             this.PassBox.Name = "PassBox";
             this.PassBox.Size = new System.Drawing.Size(100, 26);
             this.PassBox.TabIndex = 8;
+            this.PassBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoginBox_KeyPress);
             // 
             // label2
             // 

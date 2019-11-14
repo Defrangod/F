@@ -39,10 +39,16 @@ namespace Practice
             }
             else
             {
+                DBConnection.GetSotrudID(LoginBox.Text);
                 this.Hide();
                 SelectForm Selfrm = new SelectForm();
                 Selfrm.Show();
             }
+        }
+
+        private void Login_pass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z')) e.Handled = true;
         }
     }
 }

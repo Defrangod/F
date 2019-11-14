@@ -67,6 +67,7 @@
             this.CategoryBox.Name = "CategoryBox";
             this.CategoryBox.Size = new System.Drawing.Size(230, 23);
             this.CategoryBox.TabIndex = 7;
+            this.CategoryBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CategoryBox_KeyPress);
             // 
             // label1
             // 
