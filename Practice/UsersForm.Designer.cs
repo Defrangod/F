@@ -154,7 +154,7 @@
             // CancelButton
             // 
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(143, 187);
+            this.CancelButton.Location = new System.Drawing.Point(143, 179);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(86, 29);
             this.CancelButton.TabIndex = 6;
