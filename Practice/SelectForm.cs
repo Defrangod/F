@@ -88,5 +88,11 @@ namespace Practice
             AccountingForm accountingFrm = new AccountingForm();
             accountingFrm.Show();
         }
+
+        private void SelectForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DBConnection.Close();
+            Application.Exit();
+        }
     }
 }

@@ -97,6 +97,7 @@
             // 
             this.EquipmentBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EquipmentBox.Location = new System.Drawing.Point(150, 169);
+            this.EquipmentBox.MaxLength = 40;
             this.EquipmentBox.Name = "EquipmentBox";
             this.EquipmentBox.Size = new System.Drawing.Size(176, 23);
             this.EquipmentBox.TabIndex = 17;
@@ -116,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(336, 240);
             this.Controls.Add(this.EquipmentDataGridView);
             this.Controls.Add(this.DeleteButton);
@@ -127,6 +129,7 @@
             this.Name = "EquipmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EquipmentForm";
+            this.Load += new System.EventHandler(this.EquipmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EquipmentDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

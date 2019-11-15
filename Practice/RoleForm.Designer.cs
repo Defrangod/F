@@ -75,6 +75,7 @@
             // 
             this.RoleBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RoleBox.Location = new System.Drawing.Point(58, 185);
+            this.RoleBox.MaxLength = 40;
             this.RoleBox.Name = "RoleBox";
             this.RoleBox.Size = new System.Drawing.Size(197, 23);
             this.RoleBox.TabIndex = 2;
@@ -114,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(271, 262);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DeleteButton);

@@ -18,6 +18,7 @@ namespace Practice
         }
         string IDs;
         string LoginB;
+        int Otb;
         private void Users_Load(object sender, EventArgs e)
         {
             //загрузка таблиц
@@ -147,6 +148,34 @@ namespace Practice
         private void LoginBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z')) e.Handled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Otb == 1)
+            {
+                DBConnection.GetUserList();
+                UsersDataGridView.DataSource = DBConnection.dtUsers;
+                Otb = 0;
+                OtbButton.Text = "Отбор по роли";
+            }
+            else
+            {
+                DBConnection.GetUserList(RoleComboBox.SelectedValue.ToString());
+                UsersDataGridView.DataSource = DBConnection.dtUsers;
+                Otb = 1;
+                OtbButton.Text = "Отменить отбор";
+                //проверка
+                if (Convert.ToInt32(UsersDataGridView.RowCount.ToString()) == 0)
+                {
+                    MessageBox.Show("Номер не найден");
+                    DBConnection.GetUserList();
+                    UsersDataGridView.DataSource = DBConnection.dtUsers;
+
+                    Otb = 0;
+                    OtbButton.Text = "Отбор по роли";
+                }
+            }
         }
     }
 }

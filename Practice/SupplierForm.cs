@@ -16,7 +16,8 @@ namespace Practice
         {
             InitializeComponent();
         }
-
+        int otbN;
+        int otbI;
         string Ids;
         string OldName;
         string OldInn;
@@ -157,6 +158,73 @@ namespace Practice
         {
             DBConnection.GetSupplierList();
             SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+        }
+
+        private void NameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar != ' ')) e.Handled = true;
+        }
+        private void InnBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8)) e.Handled = true;
+        }
+
+        private void SiteBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar < 'a' || e.KeyChar > 'Z') && (e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar != ' ')) e.Handled = true;
+        }
+
+        private void InnSButton_Click(object sender, EventArgs e)
+        {
+            if (otbI == 1)
+            {
+                DBConnection.GetSupplierList();
+                SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+                otbI = 0;
+                InnSButton.Text = "Поиск по ИНН";
+            }
+            else
+            {
+                DBConnection.GetSupplierList(null,InnBox.Text);
+                SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+                otbI = 1;
+                InnSButton.Text = "Отменить поиск";
+                //проверка
+                if (Convert.ToInt32(SupplierDataGridView.RowCount.ToString()) == 0)
+                {
+                    MessageBox.Show("Номер не найден");
+                    DBConnection.GetSupplierList();
+                    SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+                    otbI = 0;
+                    InnSButton.Text = "Поиск по ИНН";
+                }
+            }
+        }
+
+        private void NameSButton_Click(object sender, EventArgs e)
+        {
+            if (otbN == 1)
+            {
+                DBConnection.GetSupplierList();
+                SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+                otbN = 0;
+                NameSButton.Text = "Поиск по наименованию";
+            }
+            else
+            {
+                DBConnection.GetSupplierList(NameBox.Text, null);
+                SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+                otbN = 1;
+                NameSButton.Text = "Отменить поиск";
+                if (Convert.ToInt32(SupplierDataGridView.RowCount.ToString()) == 0)
+                {
+                    MessageBox.Show("Номер не найден");
+                    DBConnection.GetSupplierList();
+                    SupplierDataGridView.DataSource = DBConnection.dtSupplier;
+                    otbI = 0;
+                    InnSButton.Text = "Поиск по наименованию";
+                }
+            }
         }
     }
 }

@@ -53,6 +53,8 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.NameSButton = new System.Windows.Forms.Button();
+            this.InnSButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SupplierDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,44 +189,56 @@
             // NameBox
             // 
             this.NameBox.Location = new System.Drawing.Point(13, 238);
+            this.NameBox.MaxLength = 40;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(185, 20);
             this.NameBox.TabIndex = 7;
+            this.NameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameBox_KeyPress);
             // 
             // InnBox
             // 
             this.InnBox.Location = new System.Drawing.Point(242, 238);
+            this.InnBox.MaxLength = 12;
             this.InnBox.Name = "InnBox";
             this.InnBox.Size = new System.Drawing.Size(161, 20);
             this.InnBox.TabIndex = 8;
+            this.InnBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InnBox_KeyPress);
             // 
             // AdressBox
             // 
             this.AdressBox.Location = new System.Drawing.Point(15, 383);
+            this.AdressBox.MaxLength = 70;
             this.AdressBox.Name = "AdressBox";
             this.AdressBox.Size = new System.Drawing.Size(183, 20);
             this.AdressBox.TabIndex = 9;
+            this.AdressBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameBox_KeyPress);
             // 
             // PastNameBox
             // 
             this.PastNameBox.Location = new System.Drawing.Point(15, 307);
+            this.PastNameBox.MaxLength = 40;
             this.PastNameBox.Name = "PastNameBox";
             this.PastNameBox.Size = new System.Drawing.Size(183, 20);
             this.PastNameBox.TabIndex = 10;
+            this.PastNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameBox_KeyPress);
             // 
             // SiteBox
             // 
             this.SiteBox.Location = new System.Drawing.Point(242, 307);
+            this.SiteBox.MaxLength = 40;
             this.SiteBox.Name = "SiteBox";
             this.SiteBox.Size = new System.Drawing.Size(161, 20);
             this.SiteBox.TabIndex = 11;
+            this.SiteBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SiteBox_KeyPress);
             // 
             // ContactBox
             // 
             this.ContactBox.Location = new System.Drawing.Point(242, 383);
+            this.ContactBox.MaxLength = 70;
             this.ContactBox.Name = "ContactBox";
             this.ContactBox.Size = new System.Drawing.Size(161, 20);
             this.ContactBox.TabIndex = 12;
+            this.ContactBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameBox_KeyPress);
             // 
             // DeleteButton
             // 
@@ -283,11 +297,36 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // NameSButton
+            // 
+            this.NameSButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameSButton.Location = new System.Drawing.Point(604, 352);
+            this.NameSButton.Name = "NameSButton";
+            this.NameSButton.Size = new System.Drawing.Size(125, 51);
+            this.NameSButton.TabIndex = 18;
+            this.NameSButton.Text = "Поиск по Наименованию";
+            this.NameSButton.UseVisualStyleBackColor = true;
+            this.NameSButton.Click += new System.EventHandler(this.NameSButton_Click);
+            // 
+            // InnSButton
+            // 
+            this.InnSButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InnSButton.Location = new System.Drawing.Point(458, 361);
+            this.InnSButton.Name = "InnSButton";
+            this.InnSButton.Size = new System.Drawing.Size(86, 42);
+            this.InnSButton.TabIndex = 19;
+            this.InnSButton.Text = "Поиск по ИНН";
+            this.InnSButton.UseVisualStyleBackColor = true;
+            this.InnSButton.Click += new System.EventHandler(this.InnSButton_Click);
+            // 
             // SupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(858, 450);
+            this.Controls.Add(this.InnSButton);
+            this.Controls.Add(this.NameSButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SaveButton);
@@ -342,5 +381,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Site_sz;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContractPerson;
+        private System.Windows.Forms.Button NameSButton;
+        private System.Windows.Forms.Button InnSButton;
     }
 }

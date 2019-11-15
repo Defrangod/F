@@ -85,6 +85,7 @@
             // 
             this.DevisionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DevisionBox.Location = new System.Drawing.Point(144, 169);
+            this.DevisionBox.MaxLength = 40;
             this.DevisionBox.Name = "DevisionBox";
             this.DevisionBox.Size = new System.Drawing.Size(182, 23);
             this.DevisionBox.TabIndex = 2;
@@ -116,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(336, 240);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);

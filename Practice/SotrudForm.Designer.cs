@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.PhoneSButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SotruDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,9 +100,9 @@
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteButton.Location = new System.Drawing.Point(352, 237);
+            this.DeleteButton.Location = new System.Drawing.Point(330, 234);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(86, 29);
+            this.DeleteButton.Size = new System.Drawing.Size(123, 29);
             this.DeleteButton.TabIndex = 22;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -110,9 +111,9 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(352, 167);
+            this.SaveButton.Location = new System.Drawing.Point(330, 164);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(86, 29);
+            this.SaveButton.Size = new System.Drawing.Size(123, 29);
             this.SaveButton.TabIndex = 20;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -122,9 +123,9 @@
             // EditButton
             // 
             this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditButton.Location = new System.Drawing.Point(352, 202);
+            this.EditButton.Location = new System.Drawing.Point(330, 199);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(86, 29);
+            this.EditButton.Size = new System.Drawing.Size(123, 29);
             this.EditButton.TabIndex = 19;
             this.EditButton.Text = "Изменить";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -133,9 +134,9 @@
             // AddButton
             // 
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddButton.Location = new System.Drawing.Point(352, 167);
+            this.AddButton.Location = new System.Drawing.Point(330, 164);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(86, 29);
+            this.AddButton.Size = new System.Drawing.Size(123, 29);
             this.AddButton.TabIndex = 18;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -144,6 +145,7 @@
             // FIOBox
             // 
             this.FIOBox.Location = new System.Drawing.Point(110, 172);
+            this.FIOBox.MaxLength = 70;
             this.FIOBox.Name = "FIOBox";
             this.FIOBox.Size = new System.Drawing.Size(184, 20);
             this.FIOBox.TabIndex = 23;
@@ -152,6 +154,7 @@
             // PhoneBox
             // 
             this.PhoneBox.Location = new System.Drawing.Point(110, 207);
+            this.PhoneBox.MaxLength = 11;
             this.PhoneBox.Name = "PhoneBox";
             this.PhoneBox.Size = new System.Drawing.Size(184, 20);
             this.PhoneBox.TabIndex = 24;
@@ -196,20 +199,33 @@
             // CancelButton
             // 
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(352, 202);
+            this.CancelButton.Location = new System.Drawing.Point(330, 199);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(86, 29);
+            this.CancelButton.Size = new System.Drawing.Size(123, 29);
             this.CancelButton.TabIndex = 29;
             this.CancelButton.Text = "Отменить";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Visible = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // PhoneSButton
+            // 
+            this.PhoneSButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PhoneSButton.Location = new System.Drawing.Point(330, 269);
+            this.PhoneSButton.Name = "PhoneSButton";
+            this.PhoneSButton.Size = new System.Drawing.Size(123, 43);
+            this.PhoneSButton.TabIndex = 30;
+            this.PhoneSButton.Text = "Поиск по номеру";
+            this.PhoneSButton.UseVisualStyleBackColor = true;
+            this.PhoneSButton.Click += new System.EventHandler(this.PhoneSButton_Click);
+            // 
             // SotrudForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 296);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(465, 319);
+            this.Controls.Add(this.PhoneSButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -249,5 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
+        private System.Windows.Forms.Button PhoneSButton;
     }
 }

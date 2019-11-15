@@ -69,5 +69,11 @@ namespace Practice
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar != ' ')) e.Handled = true;
         }
+
+        private void EquipmentForm_Load(object sender, EventArgs e)
+        {
+            DBConnection.GetEquipList();
+            EquipmentDataGridView.DataSource = DBConnection.dtEquip;
+        }
     }
 }

@@ -64,6 +64,7 @@
             // 
             this.CategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CategoryBox.Location = new System.Drawing.Point(96, 169);
+            this.CategoryBox.MaxLength = 40;
             this.CategoryBox.Name = "CategoryBox";
             this.CategoryBox.Size = new System.Drawing.Size(230, 23);
             this.CategoryBox.TabIndex = 7;
@@ -116,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(336, 240);
             this.Controls.Add(this.CategoryDataGridView);
             this.Controls.Add(this.DeleteButton);

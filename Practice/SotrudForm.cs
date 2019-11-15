@@ -165,5 +165,24 @@ namespace Practice
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9')) e.Handled = true;
         }
+
+        private void PhoneSButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PhoneBox.Text))
+            {
+                MessageBox.Show("Введите номер телефона");
+            }
+            else
+            {
+                DBConnection.GetSotrudList(PhoneBox.Text);
+                SotruDataGridView.DataSource = DBConnection.dtSotrud;
+                if (Convert.ToInt32(SotruDataGridView.RowCount.ToString()) == 0)
+                {
+                    MessageBox.Show("Номер не найден");
+                    DBConnection.GetSotrudList();
+                    SotruDataGridView.DataSource = DBConnection.dtSotrud;
+                }
+            }
+        }
     }
 }

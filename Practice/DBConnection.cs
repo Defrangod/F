@@ -38,6 +38,7 @@ namespace Practice
         static public DataTable dtSotrud = new DataTable();
         static public DataTable dtUserCombo = new DataTable();
         static public DataTable dtAccounting = new DataTable();
+        static public DataTable dtChangeLog = new DataTable();
         //
         // Подключение БД
         //
@@ -113,7 +114,7 @@ namespace Practice
         //
         static public void GetUserList(string selectedRole = null)
         {
-            try
+            try 
             {
                 if (selectedRole == null)
                 {
@@ -121,7 +122,7 @@ namespace Practice
                 }
                 else
                 {
-                    msCommand.CommandText = "select user.Login,user.Password,role.Role from user, role where user.role = role.ID user.role ='" + selectedRole + "'";
+                    msCommand.CommandText = "select user.Login,user.Password,role.Role from user, role where user.role = role.ID and user.role ='" + selectedRole + "'";
                 }
                 dtUsers.Clear();
                 msDataAdapter.Fill(dtUsers);
@@ -230,11 +231,22 @@ namespace Practice
         //
         //Вывод списка поставщиков
         //
-        static public void GetSupplierList()
+        static public void GetSupplierList(string Name = null, string INN = null)
         {
             try
             {
-                msCommand.CommandText = "select * from Supplier";
+                if (Name == null && INN == null)
+                {
+                    msCommand.CommandText = "select * from Supplier";
+                }
+                else if (INN == null)
+                {
+                    msCommand.CommandText = "select * from Supplier where Name='"+Name+"'";
+                }
+                else
+                {
+                    msCommand.CommandText = "select * from Supplier where INN='" + INN + "'";
+                }
                 dtSupplier.Clear();
                 msDataAdapter.Fill(dtSupplier);
             }
@@ -262,13 +274,21 @@ namespace Practice
         //
         //Вывод списка cотрудников
         //
-        static public void GetSotrudList()
+        static public void GetSotrudList(string phone = null)
         {
             try
             {
-                msCommand.CommandText = "select sotrud.id, sotrud.FIO, sotrud.Phone, user.Login from sotrud,user where sotrud.User = user.ID";
+                if (phone == null)
+                {
+                    msCommand.CommandText = "select sotrud.id, sotrud.FIO, sotrud.Phone, user.Login from sotrud,user where sotrud.User = user.ID";
+                }
+                else
+                {
+                    msCommand.CommandText = "select sotrud.id, sotrud.FIO, sotrud.Phone, user.Login from sotrud,user where sotrud.User = user.ID and sotrud.phone ='"+ phone +"'";
+                }
                 dtSotrud.Clear();
                 msDataAdapter.Fill(dtSotrud);
+
             }
             catch (Exception ex)
             {
@@ -285,6 +305,23 @@ namespace Practice
                 msCommand.CommandText = " select accounting.ID, category.category, equipment.equipment, Zip.zip, accounting.PartNmodel, accounting.kolvo, accounting.InvNumber, supplier.Name,division.division,Status.Status, accounting.comment, accounting.DatePost, accounting.DateEdit, sotrud.FIO from accounting,category,equipment,zip,supplier,division,status,sotrud where accounting.Category = category.ID and accounting.Equipment = equipment.ID and accounting.zip = zip.id and accounting.supplier = supplier.ID and accounting.Division = division.ID and accounting.status = status.ID and accounting.sotrud = sotrud.ID;";
                 dtAccounting.Clear();
                 msDataAdapter.Fill(dtAccounting);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка!");
+            }
+        }
+
+        //
+        //Вывод Истории изменений
+        //
+        static public void GetChangeLogList()
+        {
+            try
+            {
+                msCommand.CommandText = " SELECT * FROM changelog; ";
+                dtChangeLog.Clear();
+                msDataAdapter.Fill(dtChangeLog);
             }
             catch (Exception ex)
             {

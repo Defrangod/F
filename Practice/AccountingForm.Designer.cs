@@ -29,20 +29,6 @@
         private void InitializeComponent()
         {
             this.AccountingDataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PartNmodel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Namez = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DatePost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.EzComboBox = new System.Windows.Forms.ComboBox();
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
@@ -66,6 +52,21 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartNmodel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namez = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatePost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AccountingDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,108 +94,8 @@
             this.AccountingDataGridView.Name = "AccountingDataGridView";
             this.AccountingDataGridView.ReadOnly = true;
             this.AccountingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AccountingDataGridView.Size = new System.Drawing.Size(1263, 150);
+            this.AccountingDataGridView.Size = new System.Drawing.Size(1304, 150);
             this.AccountingDataGridView.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "Category";
-            this.Category.HeaderText = "Категория";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // equipment
-            // 
-            this.equipment.DataPropertyName = "equipment";
-            this.equipment.HeaderText = "Оборудование";
-            this.equipment.Name = "equipment";
-            this.equipment.ReadOnly = true;
-            // 
-            // zip
-            // 
-            this.zip.DataPropertyName = "zip";
-            this.zip.HeaderText = "ЗИП";
-            this.zip.Name = "zip";
-            this.zip.ReadOnly = true;
-            // 
-            // PartNmodel
-            // 
-            this.PartNmodel.DataPropertyName = "PartNmodel";
-            this.PartNmodel.HeaderText = "Парт номер / модель";
-            this.PartNmodel.Name = "PartNmodel";
-            this.PartNmodel.ReadOnly = true;
-            // 
-            // kolvo
-            // 
-            this.kolvo.DataPropertyName = "kolvo";
-            this.kolvo.HeaderText = "Количество";
-            this.kolvo.Name = "kolvo";
-            this.kolvo.ReadOnly = true;
-            // 
-            // InvNumber
-            // 
-            this.InvNumber.DataPropertyName = "InvNumber";
-            this.InvNumber.HeaderText = "Инвентарный номер";
-            this.InvNumber.Name = "InvNumber";
-            this.InvNumber.ReadOnly = true;
-            // 
-            // Namez
-            // 
-            this.Namez.DataPropertyName = "Name";
-            this.Namez.HeaderText = "Поставщик";
-            this.Namez.Name = "Namez";
-            this.Namez.ReadOnly = true;
-            // 
-            // Division
-            // 
-            this.Division.DataPropertyName = "division";
-            this.Division.HeaderText = "Подразделение";
-            this.Division.Name = "Division";
-            this.Division.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // Comment
-            // 
-            this.Comment.DataPropertyName = "comment";
-            this.Comment.HeaderText = "Коментарий";
-            this.Comment.Name = "Comment";
-            this.Comment.ReadOnly = true;
-            // 
-            // DatePost
-            // 
-            this.DatePost.DataPropertyName = "DatePost";
-            this.DatePost.HeaderText = "Дата создания";
-            this.DatePost.Name = "DatePost";
-            this.DatePost.ReadOnly = true;
-            // 
-            // DateEdit
-            // 
-            this.DateEdit.DataPropertyName = "DateEdit";
-            this.DateEdit.HeaderText = "Дата изменения";
-            this.DateEdit.Name = "DateEdit";
-            this.DateEdit.ReadOnly = true;
-            // 
-            // FIO
-            // 
-            this.FIO.DataPropertyName = "FIO";
-            this.FIO.HeaderText = "ФИО сотрудника";
-            this.FIO.Name = "FIO";
-            this.FIO.ReadOnly = true;
-            this.FIO.Visible = false;
             // 
             // CategoryComboBox
             // 
@@ -354,14 +255,14 @@
             this.CommentBox.Name = "CommentBox";
             this.CommentBox.Size = new System.Drawing.Size(177, 67);
             this.CommentBox.TabIndex = 20;
-            this.CommentBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PartModelBox_KeyPress);
+            this.CommentBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CommentBox_KeyPress);
             // 
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteButton.Location = new System.Drawing.Point(669, 264);
+            this.DeleteButton.Location = new System.Drawing.Point(651, 264);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(86, 29);
+            this.DeleteButton.Size = new System.Drawing.Size(104, 29);
             this.DeleteButton.TabIndex = 25;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -370,9 +271,9 @@
             // CancelButton
             // 
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(669, 210);
+            this.CancelButton.Location = new System.Drawing.Point(651, 210);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(86, 29);
+            this.CancelButton.Size = new System.Drawing.Size(104, 29);
             this.CancelButton.TabIndex = 24;
             this.CancelButton.Text = "Отменить";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -382,9 +283,9 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(669, 156);
+            this.SaveButton.Location = new System.Drawing.Point(651, 156);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(86, 29);
+            this.SaveButton.Size = new System.Drawing.Size(104, 29);
             this.SaveButton.TabIndex = 23;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -394,9 +295,9 @@
             // EditButton
             // 
             this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditButton.Location = new System.Drawing.Point(669, 210);
+            this.EditButton.Location = new System.Drawing.Point(651, 210);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(86, 29);
+            this.EditButton.Size = new System.Drawing.Size(104, 29);
             this.EditButton.TabIndex = 22;
             this.EditButton.Text = "Изменить";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -405,20 +306,132 @@
             // AddButton
             // 
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddButton.Location = new System.Drawing.Point(669, 156);
+            this.AddButton.Location = new System.Drawing.Point(651, 156);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(86, 29);
+            this.AddButton.Size = new System.Drawing.Size(104, 29);
             this.AddButton.TabIndex = 21;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 40;
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "Category";
+            this.Category.HeaderText = "Категория";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // equipment
+            // 
+            this.equipment.DataPropertyName = "equipment";
+            this.equipment.HeaderText = "Оборудование";
+            this.equipment.Name = "equipment";
+            this.equipment.ReadOnly = true;
+            // 
+            // zip
+            // 
+            this.zip.DataPropertyName = "zip";
+            this.zip.HeaderText = "ЗИП";
+            this.zip.Name = "zip";
+            this.zip.ReadOnly = true;
+            // 
+            // PartNmodel
+            // 
+            this.PartNmodel.DataPropertyName = "PartNmodel";
+            this.PartNmodel.HeaderText = "Парт номер / модель";
+            this.PartNmodel.Name = "PartNmodel";
+            this.PartNmodel.ReadOnly = true;
+            // 
+            // kolvo
+            // 
+            this.kolvo.DataPropertyName = "kolvo";
+            this.kolvo.HeaderText = "Количество";
+            this.kolvo.Name = "kolvo";
+            this.kolvo.ReadOnly = true;
+            // 
+            // InvNumber
+            // 
+            this.InvNumber.DataPropertyName = "InvNumber";
+            this.InvNumber.HeaderText = "Инвентарный номер";
+            this.InvNumber.Name = "InvNumber";
+            this.InvNumber.ReadOnly = true;
+            // 
+            // Namez
+            // 
+            this.Namez.DataPropertyName = "Name";
+            this.Namez.HeaderText = "Поставщик";
+            this.Namez.Name = "Namez";
+            this.Namez.ReadOnly = true;
+            // 
+            // Division
+            // 
+            this.Division.DataPropertyName = "division";
+            this.Division.HeaderText = "Подразделение";
+            this.Division.Name = "Division";
+            this.Division.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Статус";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // Comment
+            // 
+            this.Comment.DataPropertyName = "comment";
+            this.Comment.HeaderText = "Коментарий";
+            this.Comment.Name = "Comment";
+            this.Comment.ReadOnly = true;
+            // 
+            // DatePost
+            // 
+            this.DatePost.DataPropertyName = "DatePost";
+            this.DatePost.HeaderText = "Дата создания";
+            this.DatePost.Name = "DatePost";
+            this.DatePost.ReadOnly = true;
+            // 
+            // DateEdit
+            // 
+            this.DateEdit.DataPropertyName = "DateEdit";
+            this.DateEdit.HeaderText = "Дата изменения";
+            this.DateEdit.Name = "DateEdit";
+            this.DateEdit.ReadOnly = true;
+            // 
+            // FIO
+            // 
+            this.FIO.DataPropertyName = "FIO";
+            this.FIO.HeaderText = "ФИО сотрудника";
+            this.FIO.Name = "FIO";
+            this.FIO.ReadOnly = true;
+            this.FIO.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(651, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 46);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "История изменений";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AccountingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1263, 397);
+            this.ClientSize = new System.Drawing.Size(1304, 397);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SaveButton);
@@ -444,7 +457,7 @@
             this.Controls.Add(this.CategoryComboBox);
             this.Controls.Add(this.AccountingDataGridView);
             this.Name = "AccountingForm";
-            this.Text = "AccountingForm";
+            this.Text = "Учёт запасных частей и оборудования ИТ-отдела";
             this.Load += new System.EventHandler(this.AccountingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AccountingDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -467,6 +480,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox PartModelBox;
+        private System.Windows.Forms.TextBox KolvoBox;
+        private System.Windows.Forms.TextBox InvBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox CommentBox;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipment;
@@ -481,16 +505,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DatePost;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO;
-        private System.Windows.Forms.TextBox PartModelBox;
-        private System.Windows.Forms.TextBox KolvoBox;
-        private System.Windows.Forms.TextBox InvBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox CommentBox;
-        private System.Windows.Forms.Button DeleteButton;
-        private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button button1;
     }
 }

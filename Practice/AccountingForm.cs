@@ -57,16 +57,15 @@ namespace Practice
             }
             else
             {
-                DateTime DateS = DateTime.Now.Date;
                 //добавление записи
                 string addstring;
                 if (CategoryComboBox.SelectedValue.ToString() == "1")
                 {
-                     addstring = "null,'" + CategoryComboBox.SelectedValue.ToString() + "','" + EzComboBox.SelectedValue.ToString() + "',' 1 ','" + PartModelBox.Text + "','" + KolvoBox.Text + "','" + InvBox.Text + "','" + SupplierComboBox.SelectedValue.ToString() + "','" + DivisionComboBox.SelectedValue.ToString() + "','" + StatusComboBox.SelectedValue.ToString() + "','" + CommentBox.Text + "','" + DateS.ToString("yyyy-MM-dd") + "','" + DateS.ToString("yyyy-MM-dd") + "','" + DBConnection.SotrudId + "'";
+                     addstring = "null,'" + CategoryComboBox.SelectedValue.ToString() + "','" + EzComboBox.SelectedValue.ToString() + "',' 1 ','" + PartModelBox.Text + "','" + KolvoBox.Text + "','" + InvBox.Text + "','" + SupplierComboBox.SelectedValue.ToString() + "','" + DivisionComboBox.SelectedValue.ToString() + "','" + StatusComboBox.SelectedValue.ToString() + "','" + CommentBox.Text + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "','" + DBConnection.SotrudId + "'";
                 }
                 else
                 {
-                     addstring = "null,'" + CategoryComboBox.SelectedValue.ToString() + "',' 1 ','" + EzComboBox.SelectedValue.ToString() + "','" + PartModelBox.Text + "','" + KolvoBox.Text + "','" + InvBox.Text + "','" + SupplierComboBox.SelectedValue.ToString() + "','" + DivisionComboBox.SelectedValue.ToString() + "','" + StatusComboBox.SelectedValue.ToString() + "','" + CommentBox.Text + "','" + DateS.ToString("yyyy-MM-dd") + "','" + DateS.ToString("yyyy-MM-dd") + "','" + DBConnection.SotrudId + "'";
+                     addstring = "null,'" + CategoryComboBox.SelectedValue.ToString() + "',' 1 ','" + EzComboBox.SelectedValue.ToString() + "','" + PartModelBox.Text + "','" + KolvoBox.Text + "','" + InvBox.Text + "','" + SupplierComboBox.SelectedValue.ToString() + "','" + DivisionComboBox.SelectedValue.ToString() + "','" + StatusComboBox.SelectedValue.ToString() + "','" + CommentBox.Text + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "','" + DBConnection.SotrudId + "'";
                 }
                 DBConnection.add("accounting", addstring);
                 MessageBox.Show("Запись добавлена");
@@ -134,9 +133,13 @@ namespace Practice
                 else
                 {
                     EditString = "Category = '" + CategoryComboBox.SelectedValue.ToString() + "', Equipment = '1', Zip = '"+ EzComboBox.SelectedValue.ToString() + "', PartNmodel = '" + PartModelBox.Text + "', kolvo = '" + KolvoBox.Text + "', InvNumber = '" + InvBox.Text + "', supplier = '" + SupplierComboBox.SelectedValue.ToString() + "', Division = '" + DivisionComboBox.SelectedValue.ToString() + "', Status = '" + StatusComboBox.SelectedValue.ToString() + "', Comment = '" + CommentBox.Text + "', DateEdit = '" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "', Equipment = '" + DBConnection.SotrudId + "' Where ID = '" + IDs + "'";
-                }
+                }                
                 DBConnection.Edit("accounting", EditString);
                 MessageBox.Show("Запись изменена");
+                //
+                string addstring;
+                addstring = "null,'" + IDs + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "'";
+                DBConnection.add("ChangeLog", addstring);
                 //обновление таблицы
                 DBConnection.GetAccountingList();
                 AccountingDataGridView.DataSource = DBConnection.dtAccounting;
@@ -182,12 +185,23 @@ namespace Practice
 
         private void KolvoBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8)) e.Handled = true;
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) || KolvoBox.TextLength >4 ) e.Handled = true;
         }
 
         private void PartModelBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar != ' ')) e.Handled = true;
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar != ' ') && (e.KeyChar != 8) && (e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z')) e.Handled = true;
+        }
+
+        private void CommentBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8) && (e.KeyChar < 'а' || e.KeyChar > 'я') && (e.KeyChar < 'А' || e.KeyChar > 'Я') && (e.KeyChar != ' ') && (e.KeyChar != 8) && (e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z') || CommentBox.TextLength > 69) e.Handled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChangeLogForm changeLogFrm = new ChangeLogForm();
+            changeLogFrm.Show();
         }
     }
 }

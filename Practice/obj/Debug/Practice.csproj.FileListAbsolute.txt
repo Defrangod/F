@@ -26,3 +26,4 @@ C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.EquipmentForm.res
 C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.SupplierForm.resources
 C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.SotrudForm.resources
 C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.AccountingForm.resources
+C:\Users\kedov_da\Desktop\Practice\Practice\obj\Debug\Practice.ChangeLogForm.resources

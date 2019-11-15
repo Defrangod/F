@@ -83,6 +83,7 @@
             // LoginBox
             // 
             this.LoginBox.Location = new System.Drawing.Point(77, 130);
+            this.LoginBox.MaxLength = 40;
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(161, 20);
             this.LoginBox.TabIndex = 4;
@@ -91,6 +92,7 @@
             // PassBox
             // 
             this.PassBox.Location = new System.Drawing.Point(77, 210);
+            this.PassBox.MaxLength = 40;
             this.PassBox.Name = "PassBox";
             this.PassBox.PasswordChar = '*';
             this.PassBox.Size = new System.Drawing.Size(161, 20);
@@ -101,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(316, 338);
             this.Controls.Add(this.PassBox);
             this.Controls.Add(this.LoginBox);
