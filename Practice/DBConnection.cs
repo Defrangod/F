@@ -298,10 +298,11 @@ namespace Practice
         //
         //Вывод списка учёта
         //
-        static public void GetAccountingList()
+        static public void GetAccountingList(string category =  null, string supplier = null,  string status = null)
         {
             try
             {
+                if (category != null)
                 msCommand.CommandText = " select accounting.ID, category.category, equipment.equipment, Zip.zip, accounting.PartNmodel, accounting.kolvo, accounting.InvNumber, supplier.Name,division.division,Status.Status, accounting.comment, accounting.DatePost, accounting.DateEdit, sotrud.FIO from accounting,category,equipment,zip,supplier,division,status,sotrud where accounting.Category = category.ID and accounting.Equipment = equipment.ID and accounting.zip = zip.id and accounting.supplier = supplier.ID and accounting.Division = division.ID and accounting.status = status.ID and accounting.sotrud = sotrud.ID;";
                 dtAccounting.Clear();
                 msDataAdapter.Fill(dtAccounting);

@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             this.AccountingDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartNmodel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namez = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatePost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.EzComboBox = new System.Windows.Forms.ComboBox();
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
@@ -52,21 +66,10 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PartNmodel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Namez = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DatePost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.CategorySButton = new System.Windows.Forms.Button();
+            this.SupplierSButton = new System.Windows.Forms.Button();
+            this.StatuSButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AccountingDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +99,106 @@
             this.AccountingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AccountingDataGridView.Size = new System.Drawing.Size(1304, 150);
             this.AccountingDataGridView.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 40;
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "Category";
+            this.Category.HeaderText = "Категория";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // equipment
+            // 
+            this.equipment.DataPropertyName = "equipment";
+            this.equipment.HeaderText = "Оборудование";
+            this.equipment.Name = "equipment";
+            this.equipment.ReadOnly = true;
+            // 
+            // zip
+            // 
+            this.zip.DataPropertyName = "zip";
+            this.zip.HeaderText = "ЗИП";
+            this.zip.Name = "zip";
+            this.zip.ReadOnly = true;
+            // 
+            // PartNmodel
+            // 
+            this.PartNmodel.DataPropertyName = "PartNmodel";
+            this.PartNmodel.HeaderText = "Парт номер / модель";
+            this.PartNmodel.Name = "PartNmodel";
+            this.PartNmodel.ReadOnly = true;
+            // 
+            // kolvo
+            // 
+            this.kolvo.DataPropertyName = "kolvo";
+            this.kolvo.HeaderText = "Количество";
+            this.kolvo.Name = "kolvo";
+            this.kolvo.ReadOnly = true;
+            // 
+            // InvNumber
+            // 
+            this.InvNumber.DataPropertyName = "InvNumber";
+            this.InvNumber.HeaderText = "Инвентарный номер";
+            this.InvNumber.Name = "InvNumber";
+            this.InvNumber.ReadOnly = true;
+            // 
+            // Namez
+            // 
+            this.Namez.DataPropertyName = "Name";
+            this.Namez.HeaderText = "Поставщик";
+            this.Namez.Name = "Namez";
+            this.Namez.ReadOnly = true;
+            // 
+            // Division
+            // 
+            this.Division.DataPropertyName = "division";
+            this.Division.HeaderText = "Подразделение";
+            this.Division.Name = "Division";
+            this.Division.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Статус";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // Comment
+            // 
+            this.Comment.DataPropertyName = "comment";
+            this.Comment.HeaderText = "Коментарий";
+            this.Comment.Name = "Comment";
+            this.Comment.ReadOnly = true;
+            // 
+            // DatePost
+            // 
+            this.DatePost.DataPropertyName = "DatePost";
+            this.DatePost.HeaderText = "Дата создания";
+            this.DatePost.Name = "DatePost";
+            this.DatePost.ReadOnly = true;
+            // 
+            // DateEdit
+            // 
+            this.DateEdit.DataPropertyName = "DateEdit";
+            this.DateEdit.HeaderText = "Дата изменения";
+            this.DateEdit.Name = "DateEdit";
+            this.DateEdit.ReadOnly = true;
+            // 
+            // FIO
+            // 
+            this.FIO.DataPropertyName = "FIO";
+            this.FIO.HeaderText = "ФИО сотрудника";
+            this.FIO.Name = "FIO";
+            this.FIO.ReadOnly = true;
+            this.FIO.Visible = false;
             // 
             // CategoryComboBox
             // 
@@ -314,106 +417,6 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 40;
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "Category";
-            this.Category.HeaderText = "Категория";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // equipment
-            // 
-            this.equipment.DataPropertyName = "equipment";
-            this.equipment.HeaderText = "Оборудование";
-            this.equipment.Name = "equipment";
-            this.equipment.ReadOnly = true;
-            // 
-            // zip
-            // 
-            this.zip.DataPropertyName = "zip";
-            this.zip.HeaderText = "ЗИП";
-            this.zip.Name = "zip";
-            this.zip.ReadOnly = true;
-            // 
-            // PartNmodel
-            // 
-            this.PartNmodel.DataPropertyName = "PartNmodel";
-            this.PartNmodel.HeaderText = "Парт номер / модель";
-            this.PartNmodel.Name = "PartNmodel";
-            this.PartNmodel.ReadOnly = true;
-            // 
-            // kolvo
-            // 
-            this.kolvo.DataPropertyName = "kolvo";
-            this.kolvo.HeaderText = "Количество";
-            this.kolvo.Name = "kolvo";
-            this.kolvo.ReadOnly = true;
-            // 
-            // InvNumber
-            // 
-            this.InvNumber.DataPropertyName = "InvNumber";
-            this.InvNumber.HeaderText = "Инвентарный номер";
-            this.InvNumber.Name = "InvNumber";
-            this.InvNumber.ReadOnly = true;
-            // 
-            // Namez
-            // 
-            this.Namez.DataPropertyName = "Name";
-            this.Namez.HeaderText = "Поставщик";
-            this.Namez.Name = "Namez";
-            this.Namez.ReadOnly = true;
-            // 
-            // Division
-            // 
-            this.Division.DataPropertyName = "division";
-            this.Division.HeaderText = "Подразделение";
-            this.Division.Name = "Division";
-            this.Division.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // Comment
-            // 
-            this.Comment.DataPropertyName = "comment";
-            this.Comment.HeaderText = "Коментарий";
-            this.Comment.Name = "Comment";
-            this.Comment.ReadOnly = true;
-            // 
-            // DatePost
-            // 
-            this.DatePost.DataPropertyName = "DatePost";
-            this.DatePost.HeaderText = "Дата создания";
-            this.DatePost.Name = "DatePost";
-            this.DatePost.ReadOnly = true;
-            // 
-            // DateEdit
-            // 
-            this.DateEdit.DataPropertyName = "DateEdit";
-            this.DateEdit.HeaderText = "Дата изменения";
-            this.DateEdit.Name = "DateEdit";
-            this.DateEdit.ReadOnly = true;
-            // 
-            // FIO
-            // 
-            this.FIO.DataPropertyName = "FIO";
-            this.FIO.HeaderText = "ФИО сотрудника";
-            this.FIO.Name = "FIO";
-            this.FIO.ReadOnly = true;
-            this.FIO.Visible = false;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -425,12 +428,48 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // CategorySButton
+            // 
+            this.CategorySButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CategorySButton.Location = new System.Drawing.Point(792, 156);
+            this.CategorySButton.Name = "CategorySButton";
+            this.CategorySButton.Size = new System.Drawing.Size(104, 51);
+            this.CategorySButton.TabIndex = 27;
+            this.CategorySButton.Text = "Отбор по категории";
+            this.CategorySButton.UseVisualStyleBackColor = true;
+            this.CategorySButton.Click += new System.EventHandler(this.CategorySButton_Click);
+            // 
+            // SupplierSButton
+            // 
+            this.SupplierSButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SupplierSButton.Location = new System.Drawing.Point(792, 234);
+            this.SupplierSButton.Name = "SupplierSButton";
+            this.SupplierSButton.Size = new System.Drawing.Size(104, 51);
+            this.SupplierSButton.TabIndex = 28;
+            this.SupplierSButton.Text = "Отбор по поставщику";
+            this.SupplierSButton.UseVisualStyleBackColor = true;
+            this.SupplierSButton.Click += new System.EventHandler(this.SupplierSButton_Click);
+            // 
+            // StatuSButton
+            // 
+            this.StatuSButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StatuSButton.Location = new System.Drawing.Point(792, 316);
+            this.StatuSButton.Name = "StatuSButton";
+            this.StatuSButton.Size = new System.Drawing.Size(104, 51);
+            this.StatuSButton.TabIndex = 29;
+            this.StatuSButton.Text = "Отбор по статусу";
+            this.StatuSButton.UseVisualStyleBackColor = true;
+            this.StatuSButton.Click += new System.EventHandler(this.StatuSButton_Click);
+            // 
             // AccountingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1304, 397);
+            this.Controls.Add(this.StatuSButton);
+            this.Controls.Add(this.SupplierSButton);
+            this.Controls.Add(this.CategorySButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CancelButton);
@@ -506,5 +545,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DateEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CategorySButton;
+        private System.Windows.Forms.Button SupplierSButton;
+        private System.Windows.Forms.Button StatuSButton;
     }
 }

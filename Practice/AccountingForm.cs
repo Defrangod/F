@@ -203,5 +203,74 @@ namespace Practice
             ChangeLogForm changeLogFrm = new ChangeLogForm();
             changeLogFrm.Show();
         }
+
+        int a1;
+        int a2;
+        int a3;
+        private void CategorySButton_Click(object sender, EventArgs e)
+        {
+            if (a1 == 1)
+            {
+                CategorySButton.Text = "Отбор по категории";
+                a1 = 0;
+                DBConnection.GetAccountingList();
+                AccountingDataGridView.DataSource = DBConnection.dtAccounting;
+                SupplierSButton.Enabled = true;
+                StatuSButton.Enabled = true;
+            }
+            else
+            {
+                CategorySButton.Text = "Отменить отбор";
+                a1 = 1;
+                DBConnection.GetAccountingList(CategoryComboBox.SelectedValue.ToString());
+                AccountingDataGridView.DataSource = DBConnection.dtAccounting;
+                SupplierSButton.Enabled = false;
+                StatuSButton.Enabled = false;
+            }
+        }
+
+        private void SupplierSButton_Click(object sender, EventArgs e)
+        {
+            if (a2 == 1)
+            {
+                SupplierSButton.Text = "Отбор по поставщику";
+                a2 = 0;
+                DBConnection.GetAccountingList();
+                AccountingDataGridView.DataSource = DBConnection.dtAccounting;
+                CategorySButton.Enabled = true;
+                StatuSButton.Enabled = true;
+            }
+            else
+            {
+                SupplierSButton.Text = "Отменить отбор";
+                a2 = 1;
+                DBConnection.GetAccountingList(null,SupplierComboBox.SelectedValue.ToString());
+                AccountingDataGridView.DataSource = DBConnection.dtAccounting;
+                CategorySButton.Enabled = false;
+                StatuSButton.Enabled = false;
+            }
+        }
+
+        private void StatuSButton_Click(object sender, EventArgs e)
+        {
+            if (a2 == 1)
+            {
+                StatuSButton.Text = "Отбор по статусу";
+                a2 = 0;
+                DBConnection.GetAccountingList();
+                AccountingDataGridView.DataSource = DBConnection.dtAccounting;
+                CategorySButton.Enabled = true;
+                StatuSButton.Enabled = true;
+            }
+            else
+            {
+                StatuSButton.Text = "Отменить отбор";
+                a2 = 1;
+                DBConnection.GetAccountingList(null,null, StatusComboBox.SelectedValue.ToString());
+                AccountingDataGridView.DataSource = DBConnection.dtAccounting;
+                CategorySButton.Enabled = false;
+                SupplierSButton.Enabled = false;
+            }
+        }
     }
 }
